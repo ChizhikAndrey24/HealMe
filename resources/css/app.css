@@ -1,0 +1,99 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+@theme {
+    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+
+    --color-hm-bg: var(--hm-bg);
+    --color-hm-fg: var(--hm-fg);
+    --color-hm-fg-muted: var(--hm-fg-muted);
+    --color-hm-fg-subtle: var(--hm-fg-subtle);
+    --color-hm-surface: var(--hm-surface);
+    --color-hm-surface-2: var(--hm-surface-2);
+    --color-hm-surface-3: var(--hm-surface-3);
+    --color-hm-border: var(--hm-border);
+    --color-hm-border-strong: var(--hm-border-strong);
+    --color-hm-accent: var(--hm-accent);
+    --color-hm-accent-hover: var(--hm-accent-hover);
+    --color-hm-accent-fg: var(--hm-accent-fg);
+    --color-hm-accent-soft: var(--hm-accent-soft);
+    --color-hm-accent-border: var(--hm-accent-border);
+    --color-hm-danger-fg: var(--hm-danger-fg);
+    --color-hm-danger-bg: var(--hm-danger-bg);
+    --color-hm-danger-border: var(--hm-danger-border);
+    --color-hm-warning-fg: var(--hm-warning-fg);
+    --color-hm-warning-bg: var(--hm-warning-bg);
+    --color-hm-warning-border: var(--hm-warning-border);
+    --color-hm-success-fg: var(--hm-success-fg);
+    --color-hm-success-bg: var(--hm-success-bg);
+    --color-hm-success-border: var(--hm-success-border);
+}
+
+/* Theme tokens must live on :root so Tailwind --color-hm-* (var(--hm-*)) re-resolve. */
+:root,
+:root[data-theme='dark'] {
+    color-scheme: dark;
+    --hm-bg: #020617;
+    --hm-fg: #f8fafc;
+    --hm-fg-muted: #cbd5e1;
+    --hm-fg-subtle: #94a3b8;
+    --hm-surface: rgb(15 23 42 / 0.8);
+    --hm-surface-2: rgb(2 6 23 / 0.7);
+    --hm-surface-3: #1e293b;
+    --hm-border: #1e293b;
+    --hm-border-strong: #334155;
+    --hm-accent: #06b6d4;
+    --hm-accent-hover: #22d3ee;
+    --hm-accent-fg: #020617;
+    --hm-accent-soft: rgb(6 182 212 / 0.1);
+    --hm-accent-border: rgb(6 182 212 / 0.4);
+    --hm-danger-fg: #fecdd3;
+    --hm-danger-bg: rgb(244 63 94 / 0.1);
+    --hm-danger-border: rgb(244 63 94 / 0.3);
+    --hm-warning-fg: #fde68a;
+    --hm-warning-bg: rgb(245 158 11 / 0.1);
+    --hm-warning-border: rgb(245 158 11 / 0.3);
+    --hm-success-fg: #bbf7d0;
+    --hm-success-bg: rgb(34 197 94 / 0.12);
+    --hm-success-border: rgb(34 197 94 / 0.35);
+}
+
+:root[data-theme='light'] {
+    color-scheme: light;
+    --hm-bg: #f8fafc;
+    --hm-fg: #0f172a;
+    --hm-fg-muted: #334155;
+    --hm-fg-subtle: #64748b;
+    --hm-surface: #ffffff;
+    --hm-surface-2: #f1f5f9;
+    --hm-surface-3: #e2e8f0;
+    --hm-border: #e2e8f0;
+    --hm-border-strong: #cbd5e1;
+    --hm-accent: #0891b2;
+    --hm-accent-hover: #0e7490;
+    --hm-accent-fg: #ffffff;
+    --hm-accent-soft: rgb(8 145 178 / 0.12);
+    --hm-accent-border: rgb(8 145 178 / 0.45);
+    --hm-danger-fg: #9f1239;
+    --hm-danger-bg: rgb(244 63 94 / 0.1);
+    --hm-danger-border: rgb(225 29 72 / 0.35);
+    --hm-warning-fg: #92400e;
+    --hm-warning-bg: rgb(245 158 11 / 0.12);
+    --hm-warning-border: rgb(217 119 6 / 0.35);
+    --hm-success-fg: #166534;
+    --hm-success-bg: rgb(34 197 94 / 0.12);
+    --hm-success-border: rgb(22 163 74 / 0.4);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--hm-bg);
+    color: var(--hm-fg);
+}
